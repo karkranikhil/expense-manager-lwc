@@ -4,7 +4,8 @@
         {
             "id": "example",
             "path": "/",
-            "rootComponent": "example/app"
+            "rootComponent": "example/app",
+            "layoutTemplate":"$layoutsDir/index.html"
         }
     ],
     "assets": [
