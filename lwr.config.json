@@ -2,9 +2,15 @@
     "lwc": { "modules": [{ "dir": "$rootDir/src/modules" }] },
     "routes": [
         {
-            "id": "example",
+            "id": "home",
             "path": "/",
-            "rootComponent": "example/app",
+            "rootComponent": "pages/home",
+            "layoutTemplate":"$layoutsDir/index.html"
+        },
+        {
+            "id": "login",
+            "path": "/login",
+            "rootComponent": "pages/login",
             "layoutTemplate":"$layoutsDir/index.html"
         }
     ],
