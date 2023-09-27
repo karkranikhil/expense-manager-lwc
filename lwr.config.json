@@ -5,13 +5,19 @@
             "id": "home",
             "path": "/",
             "rootComponent": "pages/home",
-            "layoutTemplate":"$layoutsDir/index.html"
+            "layoutTemplate":"$layoutsDir/index.html",
+            "bootstrap":{
+                "syntheticShadow": true
+            }
         },
         {
             "id": "login",
             "path": "/login",
             "rootComponent": "pages/login",
-            "layoutTemplate":"$layoutsDir/index.html"
+            "layoutTemplate":"$layoutsDir/index.html",
+            "bootstrap":{
+                "syntheticShadow": true
+            }
         }
     ],
     "assets": [
