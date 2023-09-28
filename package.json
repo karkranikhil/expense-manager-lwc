@@ -15,10 +15,11 @@
     "stage:prod-compat": "yarn build:prod-compat && yarn start"
   },
   "dependencies": {
+    "chart.js": "^4.4.0",
     "json-server": "^0.17.3",
     "lightning-base-components": "^1.19.5-alpha",
-    "lwc": "2.38.1",
-    "lwr": "0.9.4"
+    "lwc": "3.0.0",
+    "lwr": "0.10.3"
   },
   "engines": {
     "node": ">=16.0.0 <20"
