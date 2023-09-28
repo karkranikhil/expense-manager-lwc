@@ -15,6 +15,7 @@
     "stage:prod-compat": "yarn build:prod-compat && yarn start"
   },
   "dependencies": {
+    "lightning-base-components": "^1.19.5-alpha",
     "lwc": "2.38.1",
     "lwr": "0.9.4"
   },

@@ -3042,6 +3042,11 @@ koa@^2.13.1:
     type-is "^1.6.16"
     vary "^1.1.2"
 
+lightning-base-components@^1.19.5-alpha:
+  version "1.19.5-alpha"
+  resolved "https://registry.yarnpkg.com/lightning-base-components/-/lightning-base-components-1.19.5-alpha.tgz#07205e7e1c44e44865181fc3004ffe8be337dcac"
+  integrity sha512-VW9qaEaWwG6tAHxx9HspJLl9jKKViopB1GI+SOHCEUb+1w4tNLLWlkkJD7krCoykkxGfZPLykYlaj9KkJ9M/wQ==
+
 line-column@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/line-column/-/line-column-1.0.2.tgz#d25af2936b6f4849172b312e4792d1d987bc34a2"
