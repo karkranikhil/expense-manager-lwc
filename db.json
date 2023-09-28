@@ -49,6 +49,19 @@
             "CreatedDate": "2023-09-05T12:23:36.000+0000",
             "Date__c": "2023-09-05",
             "Notes__c": null
+          },
+          {
+            "attributes": {
+              "type": "Expense__c",
+              "url": "/services/data/v42.0/sobjects/Expense__c/a025j00000diMNXAA2"
+            },
+            "Id": "a025j00000diMNX889",
+            "Amount__c": 250,
+            "Category__c": "Utilities",
+            "Expense_Name__c": "Waterbill",
+            "CreatedDate": "2023-09-05T12:23:36.000+0000",
+            "Date__c": "2023-09-05",
+            "Notes__c": null
           }
         ]
       }
