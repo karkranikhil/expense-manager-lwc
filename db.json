@@ -8,7 +8,7 @@
     ],
     "profile": { "name": "typicode" },
     "expenses":{
-        "totalSize": 3,
+        "totalSize": 4,
         "done": true,
         "records": [
           {
