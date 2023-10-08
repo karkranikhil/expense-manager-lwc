@@ -1,4 +1,8 @@
 <template>
+    <template lwc:if={showSpinner}>
+        <components-loader></components-loader>
+    </template>
+    
     <components-navbar logged-in-user={loggedInUser}></components-navbar>
     <div class="slds-p-around_large wrapper">
         <lightning-layout multiple-rows>
