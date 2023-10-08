@@ -151,19 +151,36 @@ export default class Home extends LightningElement{
 
     //Modal Save Handler
     saveHandler(){
-        this.action= null
+      
         if(this.isFormValid()){
-            this.showModal = false
+            // this.showModal = false
             if(this.formData.Id){
                 console.log("Save Clicked success for Update", this.formData)
+                const url = `${BACKEND_URL}/expenses/${this.formData.Id}`
+                this.addAndUpdateHandler(url, 'PUT')
             } else {
                 console.log("Save Clicked success for Add", this.formData)
+                const url = `${BACKEND_URL}/expenses`
+                this.addAndUpdateHandler(url, 'POST')
             }
             
         } else {
             console.log("Save Clicked Validation failed")
         }
         
+    }
+
+    //Method to handle adding and updating of expenses
+    async addAndUpdateHandler(url, method){
+       const response =  await this.makeApiRequest(url, method, this.formData)
+       if(response.id){
+        const expenses = await this.getExpenses()
+        this.expenseRecords = expenses.totalSize > 0 ? expenses.records : []
+        this.createChartData()
+        this.showModal = false
+        this.action= null
+       }
+
     }
 
     // Add Expense Handler
