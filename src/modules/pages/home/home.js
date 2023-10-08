@@ -93,10 +93,11 @@ export default class Home extends LightningElement{
     //delete row handler
     deleteHandler(event){
         console.log(event.detail)
-        this.handleConfirmClick()
+        const url = `${BACKEND_URL}/expenses/${event.detail.Id}`
+        this.handleConfirmClick(url)
     }
     // Method to make a confirmation dialog for delete action
-    async handleConfirmClick() {
+    async handleConfirmClick(url) {
         const result = await LightningConfirm.open({
             message: 'Are you sure you want to delete',
             variant: 'header',
@@ -104,7 +105,13 @@ export default class Home extends LightningElement{
             theme:'error'
         });
         if(result){
+            const response = await this.makeApiRequest(url, 'DELETE')
             console.log("deleted record")
+            if(response.id){
+                const expenses = await this.getExpenses()
+                this.expenseRecords = expenses.totalSize>0? expenses.records:[]
+                this.createChartData()
+            }
         }
     }
   // Method to create chart data based on expenses
